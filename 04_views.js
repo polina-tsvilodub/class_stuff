@@ -39,10 +39,10 @@ const instructions = babeViews.instructions({
     trials: 1,
     name: 'instrucions',
     title: 'General Instructions',
-    text:  `This is a sample instructions view.
-            <br />
-            <br />
-            Tell your participants what they are to do here.`,
+    text:  `In this experiment you are supposed to tell whether two objects, that are presented in a different
+    orientation are actually the same or different. \n You indicate your answer with a button press,
+    where the key w responds to the answer that the objects are differnt and the key o responds to that they are same.
+    So w = different, o = same. Have Fun! :)`,
     buttonText: 'go to trials'
 });
 
@@ -102,13 +102,13 @@ const thanks = babeViews.thanks({
 
 
 // Here, we initialize a forcedChoice view
-const forced_choice_2A = babeViews.forcedChoice({
+const key_press_2A = babeViews.keyPress({
     // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
-    trials: trial_info.forced_choice.length,
+    trials: trial_info.key_press.length,
     // name and trial_type should be identical to the variable name
-    name: 'forced_choice_2A',
-    trial_type: 'forced_choice_2A',
-    data: trial_info.forced_choice
+    name: 'key_press_2A',
+    trial_type: 'key_press_2A',
+    data: trial_info.key_press
 });
 
 // There are many more templates available:

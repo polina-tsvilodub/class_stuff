@@ -5,7 +5,7 @@ const trial_info = {
     key_press: [
         {
             question: "Are the objects identical except for the rotation?",
-            picture: "mental_rotation_images/1_50_diffrent.jpg",
+            picture: "mental_rotation_images/1_50_different.jpg",
             key1: 'w',
             key2: 'o',
             o: 'same',
