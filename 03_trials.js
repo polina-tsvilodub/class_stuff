@@ -10,7 +10,10 @@ const trial_info = {
             key2: 'o',
             o: 'same',
             w: 'different',
-            expected: 'different'
+            expected: 'different',
+            rotation: 50,
+            nr_of_pic: 1,
+            objects: 'different'
         },
         {
             question: "Are the objects identical except for the rotation?",
@@ -19,7 +22,10 @@ const trial_info = {
             key2: 'o',
             o: 'same',
             w: 'different',
-            expected: 'same'
+            expected: 'same',
+            rotation: 150,
+            nr_of_pic: 3,
+            objects: 'same'
         },
         {
             question: "Are the objects identical except for the rotation?",
@@ -28,7 +34,10 @@ const trial_info = {
             key2: 'o',
             o: 'same',
             w: 'different',
-            expected: 'same'
+            expected: 'same',
+            rotation: 150,
+            nr_of_pic: 6,
+            objects: 'same'
         },
         {
             question: "Are the objects identical except for the rotation?",
@@ -37,7 +46,10 @@ const trial_info = {
             key2: 'o',
             o: 'same',
             w: 'different',
-            expected: 'different'
+            expected: 'different',
+            rotation: 150,
+            nr_of_pic: 9,
+            objects: 'different'
         },
         {
             question: "Are the objects identical except for the rotation?",
@@ -46,7 +58,10 @@ const trial_info = {
             key2: 'o',
             o: 'same',
             w: 'different',
-            expected: 'same'
+            expected: 'same',
+            rotation: 50,
+            nr_of_pic: 11,
+            objects: 'same'
         },
 
     ],
