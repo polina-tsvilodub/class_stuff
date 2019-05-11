@@ -23,14 +23,13 @@ const intro = babeViews.intro({
     trials: 1,
     name: 'intro',
     // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-    text:   `This is a sample introduction view.
+    text:   `Welcome to our mental rotation experiment!
             <br />
             <br />
-            The introduction view welcomes the participant and gives general information
-            about the experiment. You are in the <strong>${coin}</strong> group.
+            Thank you for participating!
             <br />
             <br />
-            This is a minimal experiment with one forced choice view. It can serve as a starting point for programming your own experiment.`,
+            This is a simple experiment where you indicate your answer by a key press. You will get detailed instructions in a moment. Enjoy!`,
    buttonText: 'Begin the experiment'
 });
 
@@ -39,9 +38,9 @@ const instructions = babeViews.instructions({
     trials: 1,
     name: 'instrucions',
     title: 'General Instructions',
-    text:  `In this experiment you are supposed to tell whether two objects, that are presented in a different
-    orientation are actually the same or different. \n You indicate your answer with a button press,
-    where the key w responds to the answer that the objects are differnt and the key o responds to that they are same.
+    text:  `In this experiment you are supposed to tell whether two objects that are presented in a different
+    orientation are actually the same or different. You indicate your answer with a button press,
+    where the key w corresponds to the answer that the objects are different and the key o corresponds to them being the same.
     So w = different, o = same. Have Fun! :)`,
     buttonText: 'go to trials'
 });
