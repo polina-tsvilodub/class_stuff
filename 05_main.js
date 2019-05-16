@@ -17,7 +17,7 @@ $("document").ready(function() {
         views_seq: [
             intro,
             instructions,
-            key_press_2A,
+            key_press,
             post_test,
             thanks,
         ],
