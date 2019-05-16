@@ -19,7 +19,7 @@
 */
 
 // Every experiment should start with an intro view. Here you can welcome your participants and tell them what the experiment is about
-const intro = babeViews.intro({
+const intro = babeViews.view_generator('intro',{
     trials: 1,
     name: 'intro',
     // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
@@ -34,20 +34,28 @@ const intro = babeViews.intro({
 });
 
 // For most tasks, you need instructions views
-const instructions = babeViews.instructions({
+const instructions = babeViews.view_generator('instructions',{
     trials: 1,
     name: 'instrucions',
     title: 'General Instructions',
     text:  `In this experiment you are supposed to tell whether two objects that are presented in a different
-    orientation are actually the same or different. You indicate your answer with a button press,
-    where the key w corresponds to the answer that the objects are different and the key o corresponds to them being the same.
-    So w = different, o = same. Have Fun! :)`,
-    buttonText: 'go to trials'
+    orientation are actually the same or different.
+    <br />
+    You indicate your answer with a button press, where the key w corresponds to the answer that the objects are different and the key o corresponds to them being the same.
+    <br />
+    <br />
+    We will start with a quick practice session of two images and then the real trial begins. In the practice we will tell you whether you were correct
+    but we won't in the actual trial.
+    <br />
+    So remember: w = different, o = same.
+    <br />
+    Have Fun! :)`,
+    buttonText: 'start practice'
 });
 
 
 // In the post test questionnaire you can ask your participants addtional questions
-const post_test = babeViews.postTest({
+const post_test = babeViews.view_generator('post_test', {
     trials: 1,
     name: 'post_test',
     title: 'Additional information',
@@ -70,7 +78,7 @@ const post_test = babeViews.postTest({
 });
 
 // The 'thanks' view is crucial; never delete it; it submits the results!
-const thanks = babeViews.thanks({
+const thanks = babeViews.view_generator('thanks', {
     trials: 1,
     name: 'thanks',
     title: 'Thank you for taking part in this experiment!',
@@ -101,15 +109,44 @@ const thanks = babeViews.thanks({
 
 
 // Here, we initialize a forcedChoice view
-const key_press_2A = babeViews.keyPress({
+const key_press_2A = babeViews.view_generator('key_press',{
     // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
     trials: trial_info.key_press.length,
     // name and trial_type should be identical to the variable name
     name: 'key_press_2A',
     trial_type: 'key_press_2A',
-    data: trial_info.key_press
+    data: trial_info.key_press,
+    pause: 1000,
+    fix_duration: 500,
+    // hook: {
+    //     after_response_enabled: check_response
+    // }
 });
 
+const practice_session = babeViews.view_generator('key_press', {
+  // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
+  trials: trial_practice.key_press.length,
+  // name and trial_type should be identical to the variable name
+  name: 'practice_session',
+  trial_type: 'practice_session',
+  data: trial_info.key_press,
+  pause: 1000,
+  fix_duration: 500,
+  hook: {
+      after_response_enabled: check_response
+  }
+})
+
+const trial_begin = babeViews.view_generator('instructions',{
+    trials: 1,
+    name: 'trial_begin',
+    title: 'Good Job!',
+    text:  `We will start the actual experiment now!
+    <br />
+    Remember we will not continue to tell you wether your answers were correct from here on.
+    The works exactly the same as the trials you just did! `,
+    buttonText: 'go to trials'
+});
 // There are many more templates available:
 // forcedChoice, sliderRating, dropdownChoice, testboxInput, ratingScale, imageSelection, sentenceChoice, keyPress, selfPacedReading and selfPacedReading_ratingScale
 
