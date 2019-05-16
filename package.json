@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "again": "0.0.1",
     "babe-project": "~0.1.0"
   }
 }

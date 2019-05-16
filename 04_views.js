@@ -19,7 +19,11 @@
 */
 
 // Every experiment should start with an intro view. Here you can welcome your participants and tell them what the experiment is about
+<<<<<<< HEAD
 const intro = babeViews.view_generator('intro',{
+=======
+const intro = babeViews.view_generator('intro', {
+>>>>>>> e3f7cb5cf8acc320c7be8c2751cd41515bc23bb5
     trials: 1,
     name: 'intro',
     // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
@@ -34,7 +38,7 @@ const intro = babeViews.view_generator('intro',{
 });
 
 // For most tasks, you need instructions views
-const instructions = babeViews.view_generator('instructions',{
+const instructions = babeViews.view_generator('instructions', {
     trials: 1,
     name: 'instrucions',
     title: 'General Instructions',
