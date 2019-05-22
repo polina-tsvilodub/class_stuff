@@ -58,7 +58,7 @@ const time_limit = function(data, next) {
 
 // Declare your hooks here
 const check_response = function(data, next) {
-  data.response_checked = false;
+    data.response_checked = false;
     $("body").on("keydown", function(e) {
         if (data.response_checked == false) {
             const keyPressed = String.fromCharCode(
