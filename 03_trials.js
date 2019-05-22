@@ -2,7 +2,34 @@
 
 
 const trial_info = {
+    key_press_practice: [
+        {
+          question: "Are the objects identical except for the rotation?",
+          picture: "mental_rotation_images/1_50_different.jpg",
+          key1: 'w',
+          key2: 'o',
+          o: 'same',
+          w: 'different',
+          correct: 'different',
+          rotation: 50,
+          nr_of_pic: 1,
+          objects: 'different'
+        },
+        {
+            question: "Are the objects identical except for the rotation?",
+            picture: "mental_rotation_images/3_150_same.jpg",
+            key1: 'w',
+            key2: 'o',
+            o: 'same',
+            w: 'different',
+            correct: 'same',
+            rotation: 150,
+            nr_of_pic: 3,
+            objects: 'same'
+        }
+    ],
     key_press: [
+      
         {
             question: "Are the objects identical except for the rotation?",
             picture: "mental_rotation_images/1_50_different.jpg",

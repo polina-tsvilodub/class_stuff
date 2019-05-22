@@ -27,10 +27,18 @@ const generateID = function(len) {
     return Array.from(arr, this.dec2hex).join("");
 };
 // Declare your helper functions here
+const generate_pic = function() {
+  let directory = './mental_rotation_images';
+  // get a list of all picture names
+  let fs = require('fs');
+  pics = fs.readdirSync(directory)
+  shuffeled_pics = _.shuffle(pics)
+  practice_pics = shuffeled_pics.slice(13)
+
+}
 
 
-
-/* Hooks  
+/* Hooks
 *
 *
 */
@@ -47,4 +55,23 @@ const time_limit = function(data, next) {
     }, 5000));
     next();
 };
+
 // Declare your hooks here
+const check_response = function(data, next) {
+  data.response_checked = false;
+    $("body").on("keydown", function(e) {
+        if (data.response_checked == false) {
+            const keyPressed = String.fromCharCode(
+                e.which
+            ).toLowerCase();
+            if (keyPressed == data.key1 || keyPressed == data.key2) {
+                if (data[keyPressed] === data.correct) {
+                    alert('Your answer is correct! Yey!');
+                } else {
+                    alert('Sorry, this answer is incorrect :( The correct answer was ' + data.correct);
+                }
+                data.response_checked = true;
+                next();
+            }
+        }})
+}
