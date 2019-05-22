@@ -28,12 +28,22 @@ const generateID = function(len) {
 };
 // Declare your helper functions here
 const generate_pic = function() {
-  let directory = './mental_rotation_images';
-  // get a list of all picture names
-  let fs = require('fs');
-  pics = fs.readdirSync(directory)
-  shuffeled_pics = _.shuffle(pics)
-  practice_pics = shuffeled_pics.slice(13)
+  i = 0;
+  pics_list = []
+  for i < 64:
+  pics_nr = _.sample(1:15);
+  pics_des =_.sample(50, 150);
+  pics_rot = _.sample("same", "different");
+  pic_name = (pics_nr, pics_des, pics_rot).join("_")
+  if (pics_list.includes(pic_name)) {
+    generate_pic();
+  }  else {
+    pics_list = pics_list.push(pic_name);
+    return pic_name;
+  }
+
+
+
 
 }
 
