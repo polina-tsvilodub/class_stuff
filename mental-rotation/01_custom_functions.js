@@ -28,19 +28,22 @@ const generateID = function(len) {
 };
 // Declare your helper functions here
 const generate_pic = function() {
-  i = 0;
-  pics_list = []
-  for i < 64:
-  pics_nr = _.sample(1:15);
-  pics_des =_.sample(50, 150);
-  pics_rot = _.sample("same", "different");
-  pic_name = (pics_nr, pics_des, pics_rot).join("_")
-  if (pics_list.includes(pic_name)) {
-    generate_pic();
-  }  else {
-    pics_list = pics_list.push(pic_name);
-    return pic_name;
-  }
+//  i = 0;
+//  pics_list = []
+  //for i < 64:
+  pics_nr = toString(_.random(1, 15));
+  pics_dis =_.shuffle(["50", "150"][0]);
+  pics_rot = _.shuffle(["same", "different"])[0];
+
+  pic_name = toString("mental_rotation_images/" + pics_nr+"_"+pics_dis+"_" + pics_rot+".jpg");
+
+//  if (pics_list.includes(pic_name)) {
+  //  generate_pic();
+  //}  else {
+    //pics_list = pics_list.push(pic_name);
+  console.log(pic_name);
+  return pic_name;
+  //}
 
 
 

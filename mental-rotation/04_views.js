@@ -109,18 +109,18 @@ const thanks = babeViews.view_generator('thanks', {
 
 
 // Here, we initialize a forcedChoice view
-const key_press_practice = babeViews.view_generator('key_press',{
-  trials: trial_info.key_press_practice.length,
-  name: 'key_press_practice',
-  trial_type: 'key_press',
-  data: trial_info.key_press_practice,
-  pause: 1000,
-  fix_duration: 500,
-  hook: {
-    after_response_enabled: check_response
-  }
-}
-)
+//const key_press_practice = babeViews.view_generator('key_press',{
+  //trials: trial_info.key_press_practice.length,
+  //name: 'key_press_practice',
+  //trial_type: 'key_press',
+  //data: trial_info.key_press_practice,
+  //pause: 1000,
+  //fix_duration: 500,
+  //hook: {
+    //after_response_enabled: check_response
+  //}
+//}
+//)
 const key_press = babeViews.view_generator('key_press', {
     // This will use all trials specified in `data`, you can user a smaller value (for testing), but not a larger value
     trials: trial_info.key_press.length,
@@ -138,7 +138,7 @@ const practice_session = babeViews.view_generator('key_press', {
   // name and trial_type should be identical to the variable name
   name: 'practice_session',
   trial_type: 'practice_session',
-  data: trial_info.key_press,
+  data: trial_practice.key_press,
   pause: 1000,
   fix_duration: 500,
   hook: {

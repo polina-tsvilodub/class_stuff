@@ -4,7 +4,7 @@ const trial_practice = {
   key_press: [
     {
       question: "Are the objects identical except for the rotation?",
-      picture: "mental_rotation_images/1_50_different.jpg",
+      picture: generate_pic(),
       key1: 'w',
       key2: 'o',
       o: 'same',
@@ -24,13 +24,13 @@ const trial_practice = {
       correct: 'same',
       rotation: 50,
       nr_of_pic: 11,
-      objects: 'same'  
+      objects: 'same'
     }
   ]
 }
 
 const trial_info = {
-    key_press_practice: [
+    key_press: [
         {
           question: "Are the objects identical except for the rotation?",
           picture: "mental_rotation_images/1_50_different.jpg",
@@ -57,7 +57,7 @@ const trial_info = {
         }
     ],
     key_press: [
-      
+
         {
             question: "Are the objects identical except for the rotation?",
             picture: "mental_rotation_images/1_50_different.jpg",

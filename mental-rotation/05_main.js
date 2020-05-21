@@ -17,7 +17,8 @@ $("document").ready(function() {
         views_seq: [
             intro,
             instructions,
-            key_press_practice,
+            practice_session,
+            trial_begin,
             key_press,
             post_test,
             thanks,
