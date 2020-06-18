@@ -4,3 +4,5 @@ This small project is the first homework assignment of the Experimental Psycholo
 =======
 # R
 >>>>>>> master-holder
+
+# some test stuff
